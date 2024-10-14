@@ -16,14 +16,14 @@
         </div>
       </div>
     </div>
-    <Div class="logos">
+    <div class="logos">
       <div class="logo">
         <RouterLink to="/home"><img src="../assets/DakkiiButton.png" class="logo" alt="logo" /></RouterLink>
       </div>
       <div class="logo">
         <a href="https://www.layziidakkii.com/home-daikizen"><img src="../assets/DaikizenButton.png" class="logo" alt="logo" /></a>
       </div>
-    </Div>
+    </div>
   </div>
 </template>
 
@@ -35,40 +35,87 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
+
 .landingtext {
   border-top: solid thin;
   border-bottom: solid thin;
   border-color: white;
-  margin-bottom: 15px;
-  margin-top: 15px;
+  margin: 15px 0;
+  width: 100%;
 }
 
 .content {
   display: flex;
   flex-direction: row;
-  padding: 50px;
+  padding: 20px;
 }
-.div1 {
-  margin: 25px;
-  width: 50%;
-  height: 50%;
+
+.div1, .div2 {
+  margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 50%;
+  flex: 1;
 }
-.div2 {
-  margin: 25px;
-  width: 50%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 50%;
-}
+
 .logos {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
+
+.logo {
+  margin: 10px;
+  width: 100%;
+  
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .div1, .div2 {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .logos {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin: 10px 0;
+    max-width: none; /* Remove the limit for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 5px;
+  }
+
+  .div1, .div2 {
+    margin: 5px 0;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    margin: 5px 0;
+  }
+}
+
 </style>
