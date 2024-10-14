@@ -6,10 +6,9 @@
 
 <template>
   <div>
-  <the-header></the-header>
 
   <RouterView />
-  <the-footer></the-footer>
+  
 </div>
 </template>
 

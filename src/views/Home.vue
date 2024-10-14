@@ -9,6 +9,8 @@ defineProps({
 </script>
 
 <template>
+    <the-header></the-header>
+
   <div class="content">
 
     <div class="div1">
@@ -84,6 +86,7 @@ defineProps({
 
 
   </div>
+  <the-footer></the-footer>
 
 </template>
 
