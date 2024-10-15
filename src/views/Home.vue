@@ -2,17 +2,14 @@
 import { ref } from 'vue'
 
 defineProps({
-  msg: String,
+  msg: String
 })
-
-
 </script>
 
 <template>
-    <the-header></the-header>
+  <the-header></the-header>
 
   <div class="content">
-
     <div class="div1">
       <!-- <div class="vid">
         <video autoplay muted loop id="myVideo">
@@ -29,23 +26,35 @@ defineProps({
       </div>
     </div>
     <div class="div2">
+      <div class="newsletter">
+        <button>Sign Up!</button>
+        <h2>NEWSLETTER Subscribe to my newsletter to get updates about comics and stories!</h2>
+      </div>
+    </div>
+    <div class="div3">
       <div class="title">
         <h2>SERIES</h2>
       </div>
 
       <div class="subtitle">
-        <P>Exerience wholesome stories about self-improvement, love and intimacy - original and fan-made alike!</P>
+        <P
+          >Exerience wholesome stories about self-improvement, love and intimacy - original and
+          fan-made alike!</P
+        >
       </div>
     </div>
-    <div class="div3">
+    <div class="div4">
       <div class="title">
         <h2>STORIES</h2>
       </div>
       <div class="subtitle">
-        <p>From the "intrusive 3 AM" drabbles to heartwarming and sensual short stories, read them all here!</p>
+        <p>
+          From the "intrusive 3 AM" drabbles to heartwarming and sensual short stories, read them
+          all here!
+        </p>
       </div>
     </div>
-    <div class="div4">
+    <div class="div5">
       <div class="title">
         <h2>ARTWORK</h2>
       </div>
@@ -53,7 +62,7 @@ defineProps({
         <p>View (most of) my artwork -past, present, and future!</p>
       </div>
     </div>
-    <div class="div5">
+    <div class="div6">
       <div class="title">
         <h2>ANIMATION</h2>
       </div>
@@ -61,7 +70,7 @@ defineProps({
         <p>Where i'll post my animations and animatics! I want to practive as much as I can!</p>
       </div>
     </div>
-    <div class="div6">
+    <div class="div7">
       <div class="title">
         <h2>FANART</h2>
       </div>
@@ -69,7 +78,7 @@ defineProps({
         <p>I love the fanart I get, I'll put my favorites here!</p>
       </div>
     </div>
-    <div class="div7">
+    <div class="div8">
       <div class="title">
         <h2>MEET THE TEAM</h2>
       </div>
@@ -77,17 +86,11 @@ defineProps({
         <p>Meet the talanted creators I work with to bring my art and comics to life!</p>
       </div>
     </div>
-    <div class="div8">
+    <div class="div9">
       <h2>SEARCH</h2>
     </div>
-    <div class="div9">
-
-    </div>
-
-
   </div>
   <the-footer></the-footer>
-
 </template>
 
 <style scoped>
@@ -99,7 +102,6 @@ defineProps({
   grid-template-rows: repeat(9, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-
 }
 
 .div1 {
@@ -109,10 +111,8 @@ defineProps({
   align-items: center;
   position: relative;
 
-
   overflow: hidden;
   /* background-color: red; */
-
 }
 
 .div2 {
@@ -121,11 +121,10 @@ defineProps({
   justify-content: center;
   align-items: center;
   flex-direction: row;
-
-  background-image: url("../assets/ragatha.png");
+height: 500px;
+  background-image: url('../assets/newsletter.png');
   background-repeat: no-repeat;
   background-size: auto 100%;
-
 }
 
 .div3 {
@@ -135,10 +134,9 @@ defineProps({
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-image: url("../assets/toph.jpeg");
+  background-image: url('../assets/toph.jpeg');
   background-repeat: no-repeat;
   background-size: auto 100%;
-
 }
 
 .div4 {
@@ -148,10 +146,9 @@ defineProps({
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-image: url("../assets/Comfort.png");
+  background-image: url('../assets/Comfort.png');
   background-repeat: no-repeat;
   background-size: auto 100%;
-
 }
 
 .div5 {
@@ -161,10 +158,9 @@ defineProps({
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-image: url("../assets/BlackKnighting2.png");
+  background-image: url('../assets/BlackKnighting2.png');
   background-repeat: no-repeat;
   background-size: auto 100%;
-
 }
 
 .div6 {
@@ -174,7 +170,7 @@ defineProps({
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-image: url("../assets/fanart.jpeg");
+  background-image: url('../assets/fanart.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -201,7 +197,6 @@ defineProps({
   display: inline-flex;
 }
 
-
 .div1,
 .div2,
 .div3,
@@ -212,9 +207,8 @@ defineProps({
 .div8,
 .div9 {
   border: solid 5px black;
-  border-right:none;
-  border-left:none;
-
+  border-right: none;
+  border-left: none;
 }
 
 .request {
@@ -271,9 +265,7 @@ defineProps({
   height: auto;
 }
 
-
 @media (min-width: 768px) {
-
   .div1,
   .div2,
   .div3,
@@ -284,9 +276,7 @@ defineProps({
   .div8,
   .div9 {
     background-size: 100% auto;
-
   }
-
 }
 
 @media (max-width: 768px) {
@@ -312,11 +302,7 @@ defineProps({
     align-items: center;
     text-align: center;
     flex-direction: column;
-    
-
   }
-
-
 
   .title {
     font-size: 2.5rem;
@@ -345,16 +331,14 @@ defineProps({
 }
 
 .vid {
-
   z-index: -100;
   width: 100%;
-  
-position: absolute;
-  
+
+  position: absolute;
 }
 
 .vid video {
-height: 100%;
+  height: 100%;
   width: 100%;
   z-index: -100;
 }
