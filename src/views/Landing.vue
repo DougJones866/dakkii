@@ -17,17 +17,31 @@
       </div>
     </div>
     <div class="logos">
-      <div class="logo">
-        <RouterLink to="/home"><img src="../assets/DakkiiButton.png" class="logo" alt="logo" /></RouterLink>
+      <div class="logo" 
+        @mouseover="setHoveredLogo('dakkii')"
+        @mouseleave="setHoveredLogo('')"
+        :class="{ highlighted: hoveredLogo === 'dakkii', dimmed: hoveredLogo && hoveredLogo !== 'dakkii' }">
+        <RouterLink to="/home"><img src="../assets/DakkiiButton.png" class="logo" alt="Dakkii logo" /></RouterLink>
       </div>
-      <div class="logo">
-        <a href="https://www.layziidakkii.com/home-daikizen"><img src="../assets/DaikizenButton.png" class="logo" alt="logo" /></a>
+      <div class="logo" 
+        @mouseover="setHoveredLogo('daikizen')"
+        @mouseleave="setHoveredLogo('')"
+        :class="{ highlighted: hoveredLogo === 'daikizen', dimmed: hoveredLogo && hoveredLogo !== 'daikizen' }">
+        <a href="https://www.layziidakkii.com/home-daikizen"><img src="../assets/DaikizenButton.png" class="logo" alt="Daikizen logo" /></a>
       </div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+
+const hoveredLogo = ref('');
+
+const setHoveredLogo = (logo) => {
+  hoveredLogo.value = logo;
+};
+</script>
 
 <style>
 .container {
@@ -70,12 +84,20 @@
 .logo {
   margin: 10px;
   width: 100%;
-  
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .logo img {
   width: 100%;
   height: auto;
+}
+
+.highlighted img {
+  transform: scale(1.1);
+}
+
+.dimmed img {
+  opacity: 0.5;
 }
 
 /* Responsive design */
@@ -117,5 +139,4 @@
     margin: 5px 0;
   }
 }
-
 </style>
