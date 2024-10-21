@@ -6,6 +6,7 @@ import router from './router'
 import TheHeader from './components/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
 
+
 const app = createApp(App)
 
 app.use(router)

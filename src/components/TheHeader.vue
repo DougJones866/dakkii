@@ -16,12 +16,15 @@
         </div>
         <nav :class="{ 'active': isMenuOpen }">
             <ul>
-                <li><a>Streaming</a></li>
-                <li><a>Series</a></li>
-                <li><a>Gallery</a></li>
+                <li><a>Home</a></li>
                 <li><a>Support</a></li>
-                <li><router-link to="/teams">Teams</router-link></li>
+                <li><a>Gallery</a></li>
+                <li><a>Series</a></li>
+                <li><a>Streaming</a></li>
+                <li><a>Discord</a></li>
+                <li><a>Newsletter</a></li>
                 <li><a>Contact</a></li>
+                <li><router-link to="/teams">Teams</router-link></li>
                 <li><a>Links</a></li>
             </ul>
         </nav>
