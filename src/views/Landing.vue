@@ -27,7 +27,7 @@
         @mouseover="setHoveredLogo('daikizen')"
         @mouseleave="setHoveredLogo('')"
         :class="{ highlighted: hoveredLogo === 'daikizen', dimmed: hoveredLogo && hoveredLogo !== 'daikizen' }">
-        <a href="https://www.layziidakkii.com/home-daikizen"><img src="../assets/DaikizenButton.png" class="logo" alt="Daikizen logo" /></a>
+        <RouterLink to="/dakkiizen"><img src="../assets/DaikizenButton.png" class="logo" alt="Daikizen logo" /></RouterLink>
       </div>
     </div>
   </div>

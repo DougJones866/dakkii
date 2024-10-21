@@ -27,6 +27,11 @@ const router = createRouter({
       name: 'commissions',
       component: () => import('../views/Commissions.vue')
     },
+    {
+      path: '/dakkiizen',
+      name: 'dakkiizen',
+      component: () => import('../views/Dakkiizen.vue')
+    },
     
   ]
 })
